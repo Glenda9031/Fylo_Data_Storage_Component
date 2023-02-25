@@ -1,1 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    /* primary */
+    --primary-gradient-1: hsl(6, 100%, 80%);
+    --primary-gradient-2: hsl(335, 100%, 655);
+
+    /* Neutral */
+    --neutral-pale-blue: hsl(243, 100%, 93%);
+    --neutral-grayish-blue: hsl(220, 7%, 55%);
+    --neutral-dark-blue: hsl(228, 56%, 26%);
+    --neutral-very-dark-blue: hsl(229, 57%, 11%);
+    --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    font-size: 14px;
+}
+
+.flex {
+    display: flex;
+}
+
+.align__center [
+    align-items: center;
+]
+
+.align__end {
+    align-items: flex-end;
+}
+
+.justify__center {
+    justify-content: center;
+}
+
+.space__between {
+    justify-content: space-between;
+}
+
+.storage__value {
+    color: var(--neutral-pale-blue);
+    font-weight: 700;
+}
+
+.left-storage {
+    position: absolute;
+    padding: 1.2em;
+    background-color: var(--white);
+    border-radius: 0.6em  0.6em 0  0.6em;
+    top: -2.5em;
+    right: 3em;
+}
+
+.left__storage::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    border-top: 30px solid var(--white);
+    border-left: 30px solid transparent;
+    bottom: -1.2em;
+    right: 0;;
+}
+
+.left__storage span {
+    color: var(--neutral-very-dark-blue);
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.left__storage p {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--neutral-grayish-blue);
+    font-weight: 500;
+}
