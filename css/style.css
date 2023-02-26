@@ -1,232 +1,231 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
-
 :root {
-    /* primary */
+    /* ### Primary */
     --primary-gradient-1: hsl(6, 100%, 80%);
-    --primary-gradient-2: hsl(335, 100%, 655);
-
-    /* Neutral */
+    --primary-gradient-2: hsl(335, 100%, 65%);
+  
+    /* ### Neutral */
     --neutral-pale-blue: hsl(243, 100%, 93%);
-    --neutral-grayish-blue: hsl(220, 7%, 55%);
+    --neutral-grayish-blue: hsl(229, 7%, 55%);
     --neutral-dark-blue: hsl(228, 56%, 26%);
     --neutral-very-dark-blue: hsl(229, 57%, 11%);
-    --white: #fff;
-}
-
-*,
-*::before,
-*::after {
+  }
+  
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
-}
-
-body {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  body {
     font-size: 14px;
-}
-
-.flex {
+  }
+  
+  .flex {
     display: flex;
-}
-
-.align__center [
+  }
+  
+  .align__center {
     align-items: center;
-]
-
-.align__end {
+  }
+  
+  .align__end {
     align-items: flex-end;
-}
-
-.justify__center {
+  }
+  
+  .justify__center {
     justify-content: center;
-}
-
-.space__between {
+  }
+  
+  .space__between {
     justify-content: space-between;
-}
-
-.storage__value {
+  }
+  
+  .storage__value {
     color: var(--neutral-pale-blue);
     font-weight: 700;
-}
-
-.left-storage {
+  }
+  
+  .left__storage {
     position: absolute;
     padding: 1.2em;
-    background-color: var(--white);
-    border-radius: 0.6em  0.6em 0  0.6em;
+    background-color: #fff;
+    border-radius: 0.6em 0.6em 0 0.6em;
     top: -2.5em;
     right: 3em;
-}
-
-.left__storage::after {
+  }
+  
+  .left__storage::after {
     content: "";
     position: absolute;
     display: inline-block;
-    border-top: 30px solid var(--white);
+    border-top: 30px solid #fff;
     border-left: 30px solid transparent;
     bottom: -1.2em;
-    right: 0;;
-}
-
-.left__storage span {
-    color: var(--neutral-very-dark-blue);
+    right: 0;
+  }
+  
+  .left__storage span {
+    color: #141414;
     font-weight: 700;
-    font-size: 1.3em;
-}
-
-.left__storage p {
+    font-size: 1.3rem;
+  }
+  
+  .left__storage p {
     text-transform: uppercase;
     font-size: 0.8rem;
     color: var(--neutral-grayish-blue);
     font-weight: 500;
-}
-
-.landing {
+  }
+  
+  .landing {
     min-height: 100vh;
-    background-color: var(--neutral-dark-blue);
+    background-color: var(--neutral-very-dark-blue);
     position: relative;
-    z-index: 2em;
-}
-
-.container > div:first-child {
+    z-index: 2;
+  }
+  
+  .container > div:first-child {
     background-color: var(--neutral-dark-blue);
     padding: 2em 6em 2em 2em;
     border-radius: 1em 5em 1em 1em;
     margin: 2em;
-}
-
-.container > div:first-child > img {
+  }
+  
+  .container > div:first-child > img {
     margin-bottom: 1em;
-}
-
-.options div {
+  }
+  
+  .options div {
     margin-right: 1em;
     padding: 1em;
     background-color: var(--neutral-very-dark-blue);
     border-radius: 0.8em;
-}
-
-.options div img {
+  }
+  
+  .options div img {
     object-fit: contain;
     width: 25px;
     height: 25px;
-}
-
-.container > div:nth-child(2) {
-    background-color: var(=var(--neutral-dark-blue));
+  }
+  
+  .container > div:nth-child(2) {
+    background-color: var(--neutral-dark-blue);
     border-radius: 1em;
     min-width: 500px;
     padding: 1.5em 3em;
     margin: 2em 0;
     position: relative;
-}
-
-.container > div:nth-child(2) > p {
+  }
+  
+  .container > div:nth-child(2) > p {
     margin-bottom: 1em;
     color: var(--neutral-grayish-blue);
-}
-
-.progress__bar {
+  }
+  
+  .progress__bar {
     width: 100%;
     height: 20px;
     background-color: var(--neutral-very-dark-blue);
     border-radius: 1em;
     padding: 0.5em 0.1em;
     margin-bottom: 0.5em;
-}
-
-.progress {
+  }
+  
+  .progress {
     width: 80%;
     height: 16px;
     background: linear-gradient(
-        to right,
-        var(--primary-gradient-1),
-        var(--primary-gradient-2)
+      to right,
+      var(--primary-gradient-1),
+      var(--primary-gradient-2)
     );
     border-radius: 1em;
     position: relative;
-}
-
-.progress::after {
+  }
+  
+  .progress::after {
     content: "";
     position: absolute;
     height: 12px;
+    width: 12px;
     border-radius: 50%;
     background-color: var(--neutral-pale-blue);
     right: 1%;
     top: 50%;
-    transform: translate(-50%);
-}
-
-.landing__bg {
+    transform: translateY(-50%);
+  }
+  
+  .landing__bg {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
     height: 50vh;
-    z-index: -1; 
-}
-
-.attribution {
+    z-index: -1;
+  }
+  
+  .attribution {
     position: absolute;
     text-align: center;
     bottom: 0;
     margin: 3em;
     font-size: 1rem;
     color: var(--neutral-pale-blue);
-}
-
-.attribution a {
-    color: var(primary-gradient-1);
+  }
+  
+  .attribution a {
+    color: var(--primary-gradient-1);
     text-decoration: none;
-}
-
-@media (max-width: 850px) {
+  }
+  
+  @media (max-width: 850px) {
     .landing {
-        background-image: url("./images/bg-mobile.png") no-repeat center/cover;
-        flex-direction: column;
+      background: url("./images/bg-mobile.png") no-repeat center/cover;
+      flex-direction: column;
     }
-
+  
     .left__storage {
-        top: unset;
-        bottom: -3em;
-        right: 50%;
-        transform: translateX(50%);
-        bottom-bottom-right-radius: 0.6em;
-        white-space: nowrap;
+      top: unset;
+      bottom: -3em;
+      right: 50%;
+      transform: translateX(50%);
+      border-bottom-right-radius: 0.6em;
+      white-space: nowrap;
     }
-
-    .left__storage:after {
-        display: none;
+  
+    .left__storage::after {
+      display: none;
     }
-
+  
     .landing .container {
-        flex-direction: column;
-        width: 90%;
+      flex-direction: column;
+      width: 90%;
     }
-
-    container > div:first-child {
-        flex: 1 1 100%;
-        width: 100%;
-        margin: 2em ;
+  
+    .container > div:first-child {
+      flex: 1 1 100%;
+      width: 100%;
+      margin: 2em 0;
     }
-
+  
     .container > div:nth-child(2) {
-        flex: 1 1 100%;
-        width: 100%;
-        min-width: unset;
-        margin: 2em 0;
+      flex: 1 1 100%;
+      width: 100%;
+      min-width: unset;
+      margin: 2em 0;
     }
-
+  
     .landing__bg {
-        display: none;
+      display: none;
     }
-
+  
     .attribution {
-        position: relative;
+      position: relative;
     }
-}
-
+  }
+  Footer
+  
